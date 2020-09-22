@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
 /*reset*/
+@font-face {
+	font-family: ProximaNova;
+	src: url(fonts/ProximaNova.ttf);
+}
+@font-face {
+	font-family: Scriptina;
+	src: url(fonts/Scriptina.ttf);
+}
 *, :before, :after {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 body {
-	color: #666666;
+	color: #56534c; 	
 	font-size: 14px;
-	font-family: ; 
-	max-width: 1920px;
+	font-family: Alegreya;
+	font-weight: 400;
+	max-width: 1600px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -31,7 +41,337 @@ input {
 img {
 	display: block;
 }
+.btn {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4.2px;
+	color: #ffffff;
+	background-color: rgba(86,83,76,0.7);
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
+	border: 1px dashed #9e9c93;
+}
+.desc {
+	font-family: ProximaNova;
+	letter-spacing: 1.4px; 
+}
+.h2 {
+	font-size: 48px;
+	font-weight: 700;
+	letter-spacing: 1.2px;
+}
+.h3 {
+	color: #a47d5e;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1.4px;
+	text-transform: uppercase; 
+}
+.case {
+	width: 1290px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
 .row {
 	display: flex;
 	flex-wrap: wrap;
+}
+.header {
+	background-color: rgba(86,83,76,0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.header .case {
+	align-items: center;
+}
+.header__logo {
+	padding-top: 18px;
+	padding-bottom: 8px;
+}
+.header__nav {
+	margin-left: auto;
+	margin-right: auto;
+}
+.header__nav ul {
+	display: flex;
+}
+.header__nav li {
+	margin-right: 85px;
+	position: relative;
+}
+.header__nav li:last-of-type {
+	margin-right: 0;
+}
+.header__nav li::after {
+	content: "~";
+	position: absolute;
+	display: block;
+	right: -47px;
+	top: -1px;
+	color: #ffffff;
+}
+.header__nav li:last-of-type::after {
+	display: none;
+}
+.header__nav a { 
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 4.2px;
+	border-bottom: 1px solid transparent ;
+}
+.header__nav a:hover {
+	border-bottom: 1px solid #ffffff;
+}
+.header__socials {
+	align-items: center;
+}
+.socials__item {
+	margin-right: 20px;
+}
+.socials__item:last-of-type {
+	margin-right: 0;
+	transition: .3s;
+}
+.socials__item:hover{
+	transform: scale(0.95);
+}
+
+.intro {
+	background-image: url(img/inro-bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	color: #ffffff;
+	padding-top: 280px;
+	padding-bottom: 210px;
+	overflow: hidden;
+}
+.intro__title {
+	font-size: 92px;
+	letter-spacing: 6.9px;
+	font-weight: 700;
+	text-align: center;
+	position: relative;
+	padding-bottom: 130px;
+}
+.intro__title::after {
+	content: "";
+	top: 175px;
+	left: 535px;
+	background-image: url(img/intro-line.png);
+	display: block;
+	position: absolute;
+	width: 195px;
+	height: 12px;
+}
+.intro__desc {
+	width: 544px;
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 2.1px;
+	text-shadow: 0 1px 0 #3d3029;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 67px;
+}
+.intro__btn {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: .3s;
+}
+.intro__btn:hover {
+	background-color: #ffffff;
+	color: #a47d5e;
+	border: 1px solid  #9e9c93;
+}
+
+
+
+.about {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+}
+.about::before {
+	content: "";
+	background-image: url(img/bread-border.png); 
+	top: -50px;
+	left: 50%;
+	position: absolute;
+	width: 106px;
+	height: 106px;
+	transform: translate(-50%);
+	width: 108px;
+	height: 108px;
+}
+.about .case {
+	justify-content: space-between;
+}
+.about__info {
+	text-align: center;
+	width: 485px;
+}
+
+.about__desc {
+	margin-top: 65px;
+	margin-bottom: 40px;
+	width: 484px;
+	line-height: 24px;
+	text-align: center;
+}
+.chef__info {
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 45px;
+}
+.chef__title {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 0.6px;
+	padding-bottom: 45px;
+}
+.chef__name,.chef__surname {
+	font-size: 24px;
+	letter-spacing: 0.6px;
+	border-bottom: 1px solid #d7d5ca;
+	border-top: 1px solid #d7d5ca;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	width: 111px;
+}
+.chef__photo {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+.chef__quote {
+	font-family: Scriptina;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.6px;
+	color:#a47d5e;
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+.about__pics {
+	width: 610px;
+	position: relative;
+}
+.pisc__sticker {
+	width: 279px;
+	height: 279px;
+	background-image: url(img/stiker.png);
+	text-transform: uppercase;
+	color: #c9b176;
+	font-size: 30px;
+	text-align: center;
+	padding: 0 45px;
+	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin-top: -10px;
+} 
+.pics__list {
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -20px;
+}
+.pics__item {
+	width: 295px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.pics__item img {
+	outline: 5px solid #ffffff;
+	outline-offset: -10px;
+}
+.pics__item:nth-of-type(2n) {
+	margin-right: 0;
+}
+
+
+.pancakes {
+	background-image: url(img/pancakes-bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	padding-top: 140px;
+	padding-bottom: 105px;
+	position: relative; 
+}
+.pancakes::before { /* Opacity for background */
+	content: "";
+	background-color: #c8b6ad;
+	background-color: rgba(85,92,82, 0.3  );
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.pancakes__block {
+	width: 965px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.pancakes__pic {
+	position: relative;
+	width: 420px;
+}
+.pancakes__pic img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+.pancakes__pic::after { /* Triangle in the botom of picture */
+	content: "";
+	bottom: 0;
+	left: 0;
+	border-width: 0 50px 50px 0;
+	border-color: transparent #FFFFFF transparent transparent;
+	border-style: solid;
+	position: absolute; 
+}
+.pancakes__info {
+	width: calc(100% - 420px);
+	background-color: #ffffff; 
+	padding-left: 60px;
+	padding-top: 70px;
+	position: relative;
+	box-shadow: 5px 1px 14px 0px rgba(50, 50, 50, 0.29);
+}
+.pancakes__info::after {
+	content: "";
+	background-image: url(img/pancakes-mill.png);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 261px;
+	height: 294px;
+}
+.pancakes__desc {
+	width: 400px;
+	padding-top: 60px;
+	line-height: 24px;
 }
