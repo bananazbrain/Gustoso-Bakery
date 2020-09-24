@@ -321,7 +321,7 @@ img {
 
 
 .menu {
-	background-image: url(img/pancakes-bg.png);
+	background-image: url(img/menu-bg.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
@@ -334,8 +334,7 @@ img {
 }
 .menu::before { /* Opacity for background */
 	content: "";
-	background-color: #c8b6ad;
-	background-color: rgba(85,92,82, 0.3  );
+	background-color: rgba(83,80,69, 0.5);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -391,7 +390,7 @@ img {
 }
 .menu__ready {
 	top: 0px ;
-	right: 75px;
+	right: 65px;
 	position: absolute;
 	width: 200px;
 	height: 200px;
