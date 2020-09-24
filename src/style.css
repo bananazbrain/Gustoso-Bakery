@@ -321,6 +321,9 @@ img {
 	padding-bottom: 105px;
 	position: relative; 
 }
+.pancakes .case {
+	position: relative;
+}
 .pancakes::before { /* Opacity for background */
 	content: "";
 	background-color: #c8b6ad;
@@ -378,8 +381,8 @@ img {
 	line-height: 24px;
 }
 .pancakes__ready {
-	top: 75px ;
-	right: 95px;
+	top: -85px ;
+	right: 75px;
 	position: absolute;
 	width: 200px;
 	height: 200px;
@@ -536,7 +539,6 @@ img {
 
 .sandwich {
 	padding-top: 100px;
-	padding-bottom: 120px;
 	text-align: center;
 }
 .sandwich__title {
@@ -574,8 +576,6 @@ img {
 	margin-bottom: 15px;
 	padding-top: 10px;
 }
-
-
 .sandwich__block {
 	position: relative;
 	align-items: center;
@@ -616,3 +616,52 @@ img {
 	color: #979285;
 	letter-spacing: 1.8px;
 }
+
+
+
+.footer {
+	padding-bottom: 70px;
+	padding-top: 110px;
+}
+.footer .case {
+	justify-content: center;
+	align-items: center;
+}
+.f-nav ul {
+	display: flex;
+	text-transform: uppercase;
+	letter-spacing: 4.2px; 
+	border-bottom: 1px solid #c2beba; 
+	border-top: 1px solid #c2beba;
+	padding: 25px 35px;
+}
+.f-nav li {
+	position: relative;
+	margin-right: 85px;
+}
+.f-nav li:last-of-type {
+	margin-right: 0;
+}
+.f-nav li::after {
+	content: "~";
+	position: absolute;
+	display: block;
+	right: -47px;
+	top: -1px;
+	color: #56534c;
+}
+.f-nav li:last-of-type::after {
+	display: none;
+}
+.f-nav a{
+	color: #56534c;
+	font-weight: 700;
+}
+.f-nav a:hover {
+	color: #a47d5e;
+}
+.footer__logo {
+	margin-right: 45px;
+	margin-left: 45px;
+}
+/* FRONT-END BY BANANAZBRAIN: bananazbrain.ru */
