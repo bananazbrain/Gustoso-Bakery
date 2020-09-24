@@ -1,3 +1,4 @@
+@import url('libs/slick-carousel/slick/slick.css');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap');
 /*reset*/
 @font-face {
@@ -312,19 +313,19 @@ img {
 }
 
 
-.pancakes {
+.menu {
 	background-image: url(img/pancakes-bg.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
-	padding-top: 140px;
+	padding-top: 95px;
 	padding-bottom: 105px;
 	position: relative; 
 }
-.pancakes .case {
+.menu .case {
 	position: relative;
 }
-.pancakes::before { /* Opacity for background */
+.menu::before { /* Opacity for background */
 	content: "";
 	background-color: #c8b6ad;
 	background-color: rgba(85,92,82, 0.3  );
@@ -334,22 +335,23 @@ img {
 	right: 0;
 	bottom: 0;
 }
-.pancakes__block {
+.menu__block {
 	width: 965px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	padding-top: 85px;
 }
-.pancakes__pic {
+.menu__pic {
 	position: relative;
 	width: 420px;
 }
-.pancakes__pic img {
+.menu__pic img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 }
-.pancakes__pic::after { /* Triangle in the botom of picture */
+.menu__pic::after { /* Triangle in the botom of picture */
 	content: "";
 	bottom: 0;
 	left: 0;
@@ -358,7 +360,7 @@ img {
 	border-style: solid;
 	position: absolute; 
 }
-.pancakes__info {
+.menu__info {
 	width: calc(100% - 420px);
 	background-color: #ffffff; 
 	padding-left: 60px;
@@ -366,7 +368,7 @@ img {
 	position: relative;
 	box-shadow: 5px 1px 14px 0px rgba(50, 50, 50, 0.29);
 }
-.pancakes__info::after {
+.menu__info::after {
 	content: "";
 	background-image: url(img/pancakes-mill.png);
 	position: absolute;
@@ -375,13 +377,13 @@ img {
 	width: 261px;
 	height: 294px;
 }
-.pancakes__desc {
+.menu__desc {
 	width: 400px;
 	padding-top: 60px;
 	line-height: 24px;
 }
-.pancakes__ready {
-	top: -85px ;
+.menu__ready {
+	top: 0px ;
 	right: 75px;
 	position: absolute;
 	width: 200px;
@@ -412,6 +414,70 @@ img {
 	letter-spacing: 1.8px;
 	font-weight: 700;
 }
+
+.menu__nav{
+	position: absolute;
+	bottom: 40px;
+	left: 630px;
+	width: 450px;
+	padding-left: 57px;
+	padding-right: 57px;
+	font-size: 0;
+
+}
+.menu__nav .slick-slide {
+	margin-left: 16px;
+	margin-right: 16px;
+	cursor: pointer;
+	outline: none;
+}
+.menu__nav .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	background: none;
+	transition: .3s;
+	border: none;
+	font-size: 0;
+	width: 32px;
+	height: 32px;
+	outline: none;
+	cursor: pointer;
+}
+.menu__nav .slick-arrow:hover:before{
+	opacity: 0;
+}
+.menu__nav .slick-arrow:hover:after{
+	opacity: 1;
+}
+.menu__nav .slick-arrow:before,.menu__nav .slick-arrow:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: .3s;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 32px 32px;
+}
+.menu__nav .slick-arrow:before{
+	background-image: url(img/arrow-gray.svg);
+}
+.menu__nav .slick-arrow:after{
+	opacity: 0;
+	background-image: url(img/arrow-gold.svg);
+}
+.menu__nav .slick-arrow.slick-prev{
+	left: 0;
+	transform: rotate(180deg) translateZ(0px);
+}
+.menu__nav .slick-arrow.slick-next{
+	right: 0;
+	
+}
+
 
 
 
