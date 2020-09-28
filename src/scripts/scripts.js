@@ -17,4 +17,12 @@ $(document).ready(function(){
 		variableWidth: true
 	});
 	
+	var ham = $('#ham');
+	var nav = $('#nav');
+
+	ham.on('click', function(){
+		ham.toggleClass('--toggle');
+		nav.toggleClass('--toggle');
+	})
+
 });
